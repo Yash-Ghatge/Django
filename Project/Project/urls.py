@@ -23,5 +23,7 @@ urlpatterns = [
     path('',views.Home,name='Home'),
     path('About/',views.About,name='About'),
     path('Contact/',views.Contact,name='Contact'),
-    path('Auth',include('Myapp.urls'))
+    path('Auth',include('Myapp.urls')),
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
