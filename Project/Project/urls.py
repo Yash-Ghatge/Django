@@ -28,4 +28,4 @@ urlpatterns = [
     path('Auth',include('Myapp.urls')),
 
     path("__reload__/", include("django_browser_reload.urls")),
-]+static(settings.MEDIA_URL,doucment_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
