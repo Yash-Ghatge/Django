@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django</title>
-</head>
-<body>
-   <h1>This is a Auth</h1>
-   <p>Confirm password</p> 
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block title %}Yash and Django{% endblock %}
+
+{% block content %}
+<div class="bg-slate-300">
+
+<h1> This is a Content Page || Home Page</h1>
+
+{% for order in orders  %}
+<div class="grid grid-cols-3 p-5">
+    <img src="{{order.image.url}}"></img>
+    <p>{{order.name}}</p>
+
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

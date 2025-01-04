@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Hotel
 # Create your views here.
 def Auth(request):
-    return render(request,'Myapp/index.html')
+    orders = Hotel.objects.all()
+    return render(request,'Myapp/index.html',{'orders':orders})
