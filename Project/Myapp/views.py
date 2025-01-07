@@ -9,3 +9,6 @@ def Auth(request):
 def Details(request,order_id):
     order = get_object_or_404(Hotel,pk=order_id)
     return render(request,'Myapp/all_index.html',{'order':order})
+
+def Form_1(request):
+    return render(request,'Myapp/Django_Form.html')
